@@ -1,0 +1,188 @@
+:root {
+    --dark: #374151;
+    --darker: #1F2937;
+    --darkest: #111827;
+    --gray: #6B7280;
+    --light: #EEE;
+    --pink: #EC4899;
+    --purple: #8B5Cf6;
+}
+
+* {
+    box-sizing: border-box;
+    margin: 0;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+body {
+    display: flex;
+    flex-direction: column;
+    min-height: 100hv;
+    background: var(--dark);
+    color: white;
+}
+
+header {
+    padding: 2rem 1rem;
+    max-width: 800px;
+    width: 100%;
+    margin: 0 auto;
+}
+
+header h1 {
+    font-size: 2.5rem;
+    font-weight: 300;
+    color: var(--gray);
+    margin-bottom: 1rem;
+}
+
+#newPlayerForm {
+    display: flex;
+}
+
+input, button {
+    appearance: none;
+    border: none;
+    outline: none;
+    background: none;
+}
+
+#newPlayer {
+    flex: 1 1 0%;
+    background-color: var(--darker);
+    padding: 1rem;
+    border-radius: 1rem;
+    margin-right: 1rem;
+    color: var(--light);
+    font-size: 1.25rem;
+}
+
+#newPlayer::placeholder {
+    color: var(--gray);
+}
+
+#addPlayer {
+    color: var(--pink);
+    font-size: 1.25rem;
+    font-weight: 700;
+    background-image: linear-gradient(to right, var(--pink), var(--purple));
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    transition: 0.4s;
+}
+
+#addPlayer:hover {
+    opacity: 0.7;
+}
+
+#addPlayer:active {
+    opacity: 0.4;
+}
+
+main {
+    flex: 1 1 0%;
+    max-width: 800px;
+    width: 100%;
+    margin: 0 auto;
+}
+
+.playerList {
+    padding: 1rem;
+}
+
+.playerList h2 {
+    font-size: 1.5rem;
+    font-weight: 300;
+    color: var(--gray);
+    margin-bottom: 1rem;
+}
+
+#players .player {
+    display: flex;
+    justify-content: space-between;
+    background-color: var(--darkest);
+    padding: 1rem;
+    border-radius: 1rem;
+    margin-bottom: 1rem;
+}
+
+#players .player .content {
+    flex: 1 1 0%;
+}
+
+#players .player .content .text{
+    color: var(--light);
+    font-size: 1.25rem;
+    width: 100%;
+    display: block;
+    transition: 0.4s;
+}
+
+#players .player .content .number{
+    color: var(--light);
+    font-size: 1.25rem;
+    width: 100%;
+    display: block;
+    transition: 0.4s;
+}
+
+#players .player .content .text:not {
+    color: var(--pink);
+}
+
+#players .player .actions {
+    display: flex;
+    margin: 0 -0.5rem;
+}
+
+.player .actions button {
+    cursor: pointer;
+    margin: 0 0.5rem;
+    font-size: 1.125rem;
+    font-weight: 700;
+    text-transform: uppercase;
+    transition: 0.4s;
+}
+
+.player .actions button :hover {
+    opacity: 0.7;
+}
+
+.player .actions button :active {
+    opacity: 0.4;
+}
+
+.player .actions .edit {
+    color: var(--purple);
+}
+
+.player .actions .delete {
+    color: var(--pink);
+}
+
+/* laskuri nappien muotoilu*/
+
+.counter button {
+    display: inline-block;
+    width: 30px;
+    height: 30px;
+    font-size: 24px;
+    text-align: center;
+    border: none;
+    border-radius: 14px;
+    background-color: var(--gray);
+    cursor: pointer;
+    margin-left: 20px;
+}
+  
+  .counter button:hover {
+    background-color: var(--light);
+}
+  
+  .increment {
+    color: green;
+}
+  
+  .decrement {
+    color: red;
+}
